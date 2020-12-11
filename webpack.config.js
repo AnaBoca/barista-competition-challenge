@@ -2,6 +2,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 // This is the main configuration object.
 // Here you write different options and tell Webpack what to do
@@ -68,9 +69,13 @@ module.exports = {
           },
         ],
       },
+      // {
+      //   test: /\.html$/,
+      //   use: ["html-loader"]
+      // },
       {
         // Now we apply rule for images
-        test: /\.(png|jpe?g|gif|svg)$/,
+        test: /\.(png|jpe?g|gif|svg|ico)$/,
         use: [
           {
             // Using file-loader for these files
@@ -84,14 +89,33 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.mp4$/,
+        use: [
+          {
+            // Using file-loader for these files
+            loader: 'file-loader',
+
+            // In options we can set different things like format
+            // and directory to save
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'videos/',
+              publicPath: 'videos/',
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
+    new CleanWebpackPlugin({ root: path.join(__dirname, 'dist') }),
     new MiniCssExtractPlugin({
       filename: 'bundle.css',
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      favicon: './src/images/favicon.ico',
     }),
   ],
 };

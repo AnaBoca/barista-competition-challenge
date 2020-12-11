@@ -1,47 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <script src="bundle.js" defer></script>
-  <link rel="stylesheet" href="bundle.css">
+    <script src="./javascript/index.js" defer></script>
+    <link rel="stylesheet" href="./sass/styles.scss" />
 
-  <title>Top Barista</title>
-</head>
-<body>
-  <!-- example 7 - center on mobile 2-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="d-flex flex-grow-1">
-      <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
-      <a class="navbar-brand" href="#">
-          Navbar 7
-      </a>
-      <div class="w-100 text-right">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
-              <span class="navbar-toggler-icon"></span>
-          </button>
+    <title>Barista Wars</title>
+  </head>
+  <body>
+    <section>
+      <nav class="navbar navbar-expand-lg" id="main-nav">
+        <div class="container container-fluid">
+          <div class="d-flex flex-grow-1">
+            <span class="w-100 d-lg-none d-block"></span>
+            <a class="navbar-brand" href="#">Barista Wars</a>
+            <div class="w-100 text-right">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#main-nav"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="collapse navbar-collapse flex-grow-1 text-right"
+            id="main-nav"
+          >
+            <ul class="navbar-nav ml-auto flex-nowrap">
+              <li class="nav-item">
+                <a href="#" class="nav-link">Register</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Support</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <section class="position-relative">
+      <video autoplay muted loop id="myVideo" class="position-absolute">
+        <source src="./videos/latte-art.mp4" type="video/mp4" />
+      </video>
+      <div class="main-content">
+        <div class="blur p-4">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+          totam numquam sequi excepturi a eius fugiat qui error quos reiciendis
+          sit necessitatibus ipsum maxime possimus accusamus non, quaerat repellat
+          obcaecati!
+        </div>
       </div>
-  </div>
-  <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
-      <ul class="navbar-nav ml-auto flex-nowrap">
-          <li class="nav-item">
-              <a href="#" class="nav-link">Register</a>
-          </li>
-          <li class="nav-item">
-              <a href="#" class="nav-link">Support</a>
-          </li>
-          <li class="nav-item">
-              <a href="#" class="nav-link">Login</a>
-          </li>
-      </ul>
-  </div>
-</nav>
-
-<div class="text-center">
-  <span class="badge badge-dark badge-pill">
-  this is viewport center
-  </span>
-</div>
-</body>
+    </section>
+  </body>
 </html>
