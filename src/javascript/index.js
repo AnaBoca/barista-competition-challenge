@@ -11,8 +11,10 @@ btnRegister.addEventListener('click', (event) => {
   fakeFormSubmission(formValues)
     .then(() => {
       console.log('success');
+      resetFormErrors();
     })
     .catch((errors) => {
+      resetFormErrors();
       displayErrors(errors);
     });
 });
@@ -64,7 +66,25 @@ function validateFormData(data) {
 }
 
 function displayErrors(errors) {
-  
+  Object.entries(errors).forEach((error) => {
+    console.log(error);
+    const key = error[0];
+    const valErr = error[1];
+    const alertEl = document.getElementById('alert-' + key);
+
+    if (valErr.length > 0) {
+      alertEl.classList.remove('d-none');
+    }
+
+  });
+}
+
+function resetFormErrors() {
+  const alerts = document.querySelectorAll('.alert');
+
+  alerts.forEach((alert) => {
+    alert.classList.add('d-none');
+  });
 }
 
 
