@@ -1,5 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 // Sass Variables
 $coffee: #f4a460;
@@ -41,6 +42,7 @@ body {
   height: 100vh;
   font-size: 1.2rem;
   background-color: $purple;
+  font-family: 'Cantarell', sans-serif;
 }
 
 main {
@@ -61,8 +63,8 @@ h2 {
   font-size: 3.5rem;
 }
 
-#main-navbar {
-  background-color: #000;
+.navbar {
+  background: #000;
 }
 
 #main-navbar a,
@@ -71,13 +73,29 @@ h2 {
 }
 
 #main-navbar a:hover {
+  border-bottom: 2px solid $coffee;
+}
+
+#navbar-brand-text a,
+#navbar-brand-text a:visited {
+  color: #fff;
+}
+
+#navbar-brand-text a:hover {
   color: $coffee;
   text-decoration: none;
+  border: none;
 }
 
 video {
-  max-width: 100%;
+  // max-width: 100%;
+  // top: 0;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
   top: 0;
+  left: 0;
 }
 
 .blur {
