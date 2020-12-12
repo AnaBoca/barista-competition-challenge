@@ -10,11 +10,16 @@
     <title>Barista Wars</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg sticky-top" id="main-nav">
+    <nav class="navbar navbar-expand-lg sticky-top" id="main-navbar">
       <div class="container container-fluid">
         <div class="d-flex flex-grow-1">
           <span class="w-100 d-lg-none d-block"></span>
-          <a class="navbar-brand" href="#">Barista Wars</a>
+          <a class="navbar-brand" href="#">
+            <img src="./images/logo.png" />
+          </a>
+          <span class="pull-left navbar-brand">
+            <a href="#">Barista Wars</a>
+          </span>
           <div class="w-100 text-right">
             <button
               class="navbar-toggler"
@@ -45,23 +50,33 @@
       </div>
     </nav>
 
-    <main class="pt-4 position-relative">
+    <main class="py-5 position-relative">
       <video autoplay muted loop id="myVideo" class="position-absolute">
         <source src="./videos/latte-art.mp4" type="video/mp4" />
       </video>
 
       <section>
         <div class="container container-fluid blur p-4">
-          <p class="m-0">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-            totam numquam sequi excepturi a eius fugiat qui error quos
-            reiciendis sit necessitatibus ipsum maxime possimus accusamus non,
-            quaerat repellat obcaecati!
-          </p>
+          <h2 class="text-center">Register for free today!</h2>
+          <div class="container container-fluid">
+            <p class="mb-4">
+              Impassioned and artistic baristas worldwide can enter now for a
+              chance to face off in the Barista Wars live TV competition. The
+              winner of this high-stakes contest will not only win the title of
+              "Top Barista," but will take home a respectable $25,000 cash
+              prize.
+            </p>
+            <p class="m-0">
+              Do have those coffee and cream skills? Are you prepared to whip
+              together those tasty caramel brews for a chance to be named "Top
+              Barista?" If so, fill out the registration form below and may the
+              best barista win!
+            </p>
+          </div>
         </div>
       </section>
 
-      <section class="mb-0">
+      <section>
         <div class="container container-fluid blur mb-5 p-4">
           <form>
             <div class="form-group">
@@ -76,7 +91,9 @@
               />
             </div>
 
-            <div class="alert alert-danger xs p-2 d-none" id="alert-name"><ul class="mb-0"></ul></div>
+            <div class="alert alert-danger xs p-2 d-none" id="alert-name">
+              <ul class="mb-0"></ul>
+            </div>
 
             <div class="form-group">
               <label for="email">Email address</label>
@@ -90,10 +107,12 @@
               />
             </div>
 
-            <div class="alert alert-danger xs p-2 d-none" id="alert-email"><ul class="mb-0"></ul></div>
+            <div class="alert alert-danger xs p-2 d-none" id="alert-email">
+              <ul class="mb-0"></ul>
+            </div>
 
             <div class="form-group">
-              <label for="phone">Phone number</label>
+              <label for="phone">Mobile phone number</label>
               <input
                 type="text"
                 class="form-control"
@@ -104,16 +123,37 @@
               />
             </div>
 
-            <div class="alert alert-danger xs p-2 d-none" id="alert-phone"><ul class="mb-0"></ul></div>
+            <div class="alert alert-danger xs p-2 d-none" id="alert-phone">
+              <ul class="mb-0"></ul>
+            </div>
 
-            <button type="submit" class="btn btn-register">Register for Competition</button>
+            <small id="phone-rates" class="my-3 form-text">
+              *When you provide us with your mobile phone number, you agree that
+              we may send you text messages the provided phone number. Message
+              and data rates may apply.
+            </small>
+
+            <button type="submit" class="btn btn-register">
+              Register for Competition
+            </button>
+
+            <small id="rules" class="my-3 form-text">
+              <p class="m-0">
+                By registering, you agree to our <a href="#">rules</a>,
+                <a href="#">terms</a>, and <a href="#">privacy policy</a>.
+              </p>
+              <p class="m-0">
+                Not all entrants may qualify. <a href="#">Contact us</a> with
+                any question.
+              </p>
+            </small>
           </form>
         </div>
       </section>
     </main>
 
-    <footer class="position-relative">
-      <div class="container container-fluid p-4">
+    <footer class="fixed-bottom">
+      <div class="container container-fluid p-3">
         <p class="text-white text-center m-0">Ana Boca &#169; 2020</p>
       </div>
     </footer>

@@ -117,5 +117,11 @@ module.exports = {
       template: './src/index.html',
       favicon: './src/images/favicon.ico',
     }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+      Popper: ['popper.js', 'default'],
+    }),
   ],
 };

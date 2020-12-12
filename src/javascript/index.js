@@ -1,6 +1,12 @@
 import '../sass/styles.scss';
 import '../images/favicon.ico';
 import '../videos/latte-art.mp4';
+import 'bootstrap/dist/js/bootstrap.min.js';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/js/dist/util';
+// import 'bootstrap/js/dist/dropdown';
 
 const btnRegister = document.getElementsByClassName('btn-register')[0];
 
@@ -70,8 +76,9 @@ function fakeFormSubmission(formData) {
 function validateFormData(data) {
   const errors = { name: [], email: [], phone: [] };
   const validationObj = { isValid: true, errors: errors };
-  const letters = /^[a-zA-Z ]*$/;
+  const letterFormat = /^[a-zA-Z ]*$/;
   const emailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  const phoneFormat = /^\d{3}-\d{3}-\d{4}$/;
 
   if (data.name === '') {
     errors.name.push('Name cannot be blank.');
@@ -81,7 +88,7 @@ function validateFormData(data) {
     errors.name.push('Name is too long.');
     validationObj.isValid = false;
   }
-  if (!data.name.match(letters)) {
+  if (!data.name.match(letterFormat)) {
     errors.name.push('Name must be letters only.');
     validationObj.isValid = false;
   }
@@ -91,6 +98,15 @@ function validateFormData(data) {
     validationObj.isValid = false;
   } else if (!data.email.match(emailFormat)) {
     errors.email.push('Email entered is invalid.');
+    validationObj.isValid = false;
+  }
+
+  if (data.phone === '') {
+    errors.phone.push('Phone cannot be blank.');
+    validationObj.isValid = false;
+  } else if (!data.phone.match(phoneFormat)) {
+    errors.phone.push('Phone entered is invalid');
+    validationObj.isValid = false;
   }
 
   return validationObj;

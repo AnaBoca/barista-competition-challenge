@@ -5,6 +5,7 @@
 $coffee: #f4a460;
 $brown: #674d43;
 $pumpkin: #d65923;
+$purple: #281a1f;
 
 // MOBILE-FIRST STYLESHEET
 // Important - this stylesheet is used to extend and override bootstrap styles.
@@ -14,25 +15,19 @@ $pumpkin: #d65923;
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-
 }
-
-
 
 * {
   box-sizing: border-box;
@@ -43,8 +38,9 @@ body {
   margin: 0 !important;
   padding: 0 !important;
   border: 0 !important;
-  height: 100%;
+  height: 100vh;
   font-size: 1.2rem;
+  background-color: $purple;
 }
 
 main {
@@ -52,25 +48,31 @@ main {
 }
 
 .navbar-brand,
-h1 {
+h1,
+h2 {
   font-family: 'East Sea Dokdo', cursive;
+}
+
+h2 {
+  font-size: 3rem;
 }
 
 .navbar-brand {
   font-size: 3.5rem;
 }
 
-#main-nav {
+#main-navbar {
   background-color: #000;
 }
 
-#main-nav a,
-#main-nav a:visited {
+#main-navbar a,
+#main-navbar a:visited {
   color: #fff;
 }
 
-#main-nav a:hover {
+#main-navbar a:hover {
   color: $coffee;
+  text-decoration: none;
 }
 
 video {
@@ -107,4 +109,19 @@ footer {
 
 .alert.xs {
   font-size: 0.75rem;
+}
+
+#phone-rates {
+  font-size: 0.75rem;
+}
+
+#rules a,
+#rules a:visited {
+  color: #fff;
+}
+
+#rules a:hover {
+  text-decoration: none;
+  color: $pumpkin;
+  font-weight: bold;
 }
