@@ -73,10 +73,18 @@ module.exports = {
             loader: 'postcss-loader',
           },
           {
+            loader: 'resolve-url-loader',
+            options: {
+              sourceMap: false,
+            },
+          },
+          {
             // First we transform SASS to standard CSS
             loader: 'sass-loader',
             options: {
               implementation: require('sass'),
+              sourceMap: false,
+              sourceMapContents: false,
             },
           },
         ],
@@ -96,7 +104,8 @@ module.exports = {
             // In options we can set different things like format
             // and directory to save
             options: {
-              outputPath: 'images',
+              name: '[name].[ext]',
+              outputPath: 'images/',
             },
           },
         ],

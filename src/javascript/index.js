@@ -1,12 +1,9 @@
 import '../sass/styles.scss';
-import '../images/favicon.ico';
-import '../videos/latte-art.mp4';
 import 'bootstrap/dist/js/bootstrap.min.js';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'bootstrap/js/dist/util';
-// import 'bootstrap/js/dist/dropdown';
+import '../videos/latte-art.mp4';
+import '../images/favicon.ico';
+import '../images/logo.png';
+import '../images/nav-background.png';
 
 const btnRegister = document.getElementsByClassName('btn-register')[0];
 

@@ -9932,7 +9932,7 @@ h2 {
 }
 
 .navbar {
-  background-image: url(data:image/png;base64,ZXhwb3J0IGRlZmF1bHQgX193ZWJwYWNrX3B1YmxpY19wYXRoX18gKyAiaW1hZ2VzLzc4M2IwZTY0ZjM5ZTRhODVkZDI2Y2M3NWMxMzEzODFmLnBuZyI7);
+  background: url(data:image/png;base64,ZXhwb3J0IGRlZmF1bHQgX193ZWJwYWNrX3B1YmxpY19wYXRoX18gKyAiaW1hZ2VzL25hdi1iYWNrZ3JvdW5kLnBuZyI7);
 }
 
 #main-navbar a,
