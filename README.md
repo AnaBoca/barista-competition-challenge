@@ -27,8 +27,8 @@ A mock registration page for a Barista Competition.
 
 ## 🖥️ Desktop View
 
-![Desktop Screenshot]()
+![Desktop Screenshot](https://github.com/AnaBoca/barista-competition-challenge/blob/master/src/images/desktop.png)
 
 ## 📱 Mobile View
 
-![Mobile Screenshot]()
+![Mobile Screenshot](https://github.com/AnaBoca/barista-competition-challenge/blob/master/src/images/mobile.png)
