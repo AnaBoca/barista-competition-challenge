@@ -25,6 +25,7 @@ Web page published to github-pages at: **[barista-competition-challenge](https:/
 - The application includes a `loadVideoIfNetworkIsGood()` function that will only load the background video
   if the network has a connection of 3g or 4g and if the user does not choose to save data on a mobile device.
 - Large images were optimized using [Squoosh.app](https://squoosh.app/).
+- The page uses semantic HTML to make sure it is accessible.
 
 ## 🖥️ Desktop View
 
