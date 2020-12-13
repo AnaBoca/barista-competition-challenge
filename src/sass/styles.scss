@@ -11,7 +11,7 @@ $purple: #281a1f;
 // MOBILE-FIRST STYLESHEET
 // Important - this stylesheet is used to extend and override bootstrap styles.
 
-// Extra small devices (portrait phones, less than 576px
+// Extra small devices (portrait phones, less than 576px)
 // No media query for 'xs' since this is the default in Bootstrap
 
 * {
@@ -46,6 +46,7 @@ h2 {
 .navbar {
   z-index: 2;
   background-image: url('../images/nav-background.png');
+  box-shadow: 5px 3px 18px #000;
 
   img {
     height: 2.5rem;
@@ -88,6 +89,11 @@ section {
   position: relative;
   z-index: 1;
   margin-bottom: 3rem;
+}
+
+.coffee-ring {
+  z-index: -1;
+  width: 12rem;
 }
 
 .coffee-splatter {

@@ -1,5 +1,4 @@
 import '../sass/styles.scss';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import '../videos/latte-art.mp4';
 import '../images/favicon.ico';
@@ -26,7 +25,7 @@ function registrationHandler() {
           form.parentNode.innerHTML = `
             <div id='success-alert'>
               <h2>Registration Success!</h2>
-              <p class='mb-0'>You are on your way to becoming earning the title of Top Barista!</p>
+              <p class='mb-0'>You are on your way to earning the title of Top Barista!</p>
             </div>`;
         })
         .catch((errors) => {
