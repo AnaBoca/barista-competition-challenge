@@ -1,6 +1,6 @@
 # Barista Competition Challenge
 
-A mock registration page for a Barista Competition.
+A mock registration page for a barista competition.
 
 #### Project Requirements:
 
