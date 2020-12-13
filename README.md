@@ -5,7 +5,7 @@ Web page published to github-pages at: **[barista-competition-challenge](https:/
 
 ### ✔️ Project Requirements:
 
-- Create a competitor registration webpage for the "Barista Competition" based on the provided press release and Instagram post.
+- Create a competitor registration web page for the "Barista Competition" based on the provided press release and Instagram post.
 - The registration form should capture the barista's name, email, and phone number.
 
 ### ⚙️ Primary Technologies Used:
