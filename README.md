@@ -18,10 +18,17 @@ A mock registration page for a Barista Competition.
 
 ### 📇 Feature Highlights:
 
-- The page used Webpack so that assets are bundled and minified lowering the number of HTTP requests and improving load times.
+- The page uses Webpack so that assets are bundled and minified lowering the number of HTTP requests and improving load times.
 - The page includes mobile-first design.
 - The main .js file includes both client-side validation and simulated backend validation with a success response.
 - The main .js file also includes a loadVideoIfNetworkIsGood() function that will only load the background video
   if the network has a connection of 3g or 4g and if the user does not choose to save data on the mobile device.
+- Any large images where optimized using [Squoosh.app](https://squoosh.app/).
 
-* Any large images where optimized using [Squoosh.app](https://squoosh.app/).
+## 🖥️ Desktop View
+
+![Desktop Screenshot]()
+
+## 📱 Mobile View
+
+![Mobile Screenshot]()
