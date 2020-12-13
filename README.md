@@ -1,7 +1,7 @@
 # Barista Competition Challenge
 
-A mock registration page for a barista competition.
-Website published to github-pages at: [barista-competition-challenge](https://anaboca.github.io/barista-competition-challenge/).
+A mock registration page for a barista competition. /n
+Web page published to github-pages at: [barista-competition-challenge](https://anaboca.github.io/barista-competition-challenge/).
 
 #### Project Requirements:
 
