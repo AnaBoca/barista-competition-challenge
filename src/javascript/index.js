@@ -5,32 +5,38 @@ import '../videos/latte-art.mp4';
 import '../images/favicon.ico';
 import '../images/logo.png';
 import '../images/nav-background.png';
+import '../images/coffee-splatter.png';
 
-const btnRegister = document.getElementsByClassName('btn-register')[0];
+loadVideoIfNetworkIsGood();
+registrationHandler();
 
-btnRegister.addEventListener('click', (event) => {
-  event.preventDefault();
-  const form = document.querySelector('form');
-  const formValues = serializeForm(form);
-  //Client-side validation
-  const clientSideErrs = validateFormData(formValues);
-  resetFormErrors();
-  if (clientSideErrs.isValid) {
-    fakeFormSubmission(formValues)
-      .then(() => {
-        form.parentNode.innerHTML = `
-          <div id='success-alert'>
-            <h2>Registration Success!</h2>
-            <p class='mb-0'>You are on your way to becoming earning the title of Top Barista!</p>
-          </div>`;
-      })
-      .catch((errors) => {
-        displayErrors(errors);
-      });
-  } else {
-    displayErrors(clientSideErrs.errors);
-  }
-});
+function registrationHandler() {
+  const btnRegister = document.getElementsByClassName('btn-register')[0];
+
+  btnRegister.addEventListener('click', (event) => {
+    event.preventDefault();
+    const form = document.querySelector('form');
+    const formValues = serializeForm(form);
+    //Client-side validation
+    const clientSideErrs = validateFormData(formValues);
+    resetFormErrors();
+    if (clientSideErrs.isValid) {
+      fakeFormSubmission(formValues)
+        .then(() => {
+          form.parentNode.innerHTML = `
+            <div id='success-alert'>
+              <h2>Registration Success!</h2>
+              <p class='mb-0'>You are on your way to becoming earning the title of Top Barista!</p>
+            </div>`;
+        })
+        .catch((errors) => {
+          displayErrors(errors);
+        });
+    } else {
+      displayErrors(clientSideErrs.errors);
+    }
+  });
+}
 
 /**
  * Searches for form inputs that have name attributes
@@ -136,4 +142,19 @@ function resetFormErrors() {
     alert.classList.add('d-none');
     alert.querySelector('ul').innerHTML = '';
   });
+}
+
+function loadVideoIfNetworkIsGood() {
+  const connection =
+    navigator.connection ||
+    navigator.mozConnection ||
+    navigator.webkitConnection;
+  const isConnectionFast =
+    connection.effectiveType === '3g' || connection.effectiveType === '4g';
+  if (connection) {
+    if (isConnectionFast && connection.saveData === false) {
+      const videoEl = document.getElementById('background-video');
+      videoEl.setAttribute('src', './videos/latte-art.mp4');
+    }
+  }
 }

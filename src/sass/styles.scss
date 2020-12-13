@@ -31,6 +31,7 @@ body {
 
 main {
   overflow: hidden;
+  margin-top: 88px;
 }
 
 .navbar-brand,
@@ -43,7 +44,7 @@ h2 {
   font-size: 3rem;
 }
 .navbar {
-  z-index: 1;
+  z-index: 2;
   background-image: url('../images/nav-background.png');
 
   img {
@@ -87,6 +88,13 @@ section {
   position: relative;
   z-index: 1;
   margin-bottom: 3rem;
+}
+
+.coffee-splatter {
+  z-index: -1;
+  bottom: -38px;
+  right: -18px;
+  width: 20rem;
 }
 
 form,
