@@ -45,7 +45,7 @@ h2 {
 }
 .navbar {
   z-index: 2;
-  background-image: url('../images/nav-background.png');
+  background-image: url('./images/nav-background.png');
   box-shadow: 5px 3px 18px #000;
 
   img {
@@ -114,7 +114,7 @@ footer {
       transparentize($pumpkin, 0.75),
       transparentize($pumpkin, 0.75)
     ),
-    url('../images/nav-background.png');
+    url('./images/nav-background.png');
 
   a,
   a:visited {

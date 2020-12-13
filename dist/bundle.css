@@ -9930,7 +9930,7 @@ h2 {
 
 .navbar {
   z-index: 2;
-  background-image: url("../images/nav-background.png");
+  background-image: url("./images/nav-background.png");
   box-shadow: 5px 3px 18px #000;
 }
 .navbar img {
@@ -9990,7 +9990,7 @@ form,
 }
 
 footer {
-  background-image: linear-gradient(rgba(214, 89, 35, 0.25), rgba(214, 89, 35, 0.25)), url("../images/nav-background.png");
+  background-image: linear-gradient(rgba(214, 89, 35, 0.25), rgba(214, 89, 35, 0.25)), url("./images/nav-background.png");
 }
 footer a,
 footer a:visited {
