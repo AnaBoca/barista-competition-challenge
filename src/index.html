@@ -5,58 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <script src="./javascript/index.js" defer></script>
-    <!-- <link rel="stylesheet" href="./sass/styles.scss" /> -->
 
     <title>Barista Wars</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg sticky-top" id="main-navbar">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark d-flex align-items-center"
+    >
       <div class="container container-fluid">
-        <div class="d-flex flex-grow-1">
-          <span class="w-100 d-lg-none d-block"></span>
-          <div class="navbar-brand" href="#">
-            <img src="./images/logo.png" />
-          </div>
-          <span class="pull-left navbar-brand" id="navbar-brand-text">
-            <a href="#">Barista Wars</a>
-          </span>
-          <div class="w-100 text-right">
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#main-nav"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </div>
-        </div>
-        <div
-          class="collapse navbar-collapse flex-grow-1 text-right"
-          id="main-nav"
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img
+            class="mr-3 d-none d-sm-inline-block"
+            src="../images/logo.png"
+            alt="logo"
+          />
+          <h1 class="text-wrap m-0 d-inline-block">Barista Wars</h1>
+        </a>
+
+        <button
+          class="navbar-toggler mr-3"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          <ul class="navbar-nav ml-auto flex-nowrap">
-            <li class="nav-item">
-              <a href="#" class="nav-link">Register</a>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Register <span class="sr-only">(current)</span></a
+              >
             </li>
+
             <li class="nav-item">
-              <a href="#" class="nav-link">Support</a>
+              <a class="nav-link" href="#">Support</a>
             </li>
+
             <li class="nav-item">
-              <a href="#" class="nav-link">Login</a>
+              <a class="nav-link" href="#">Login</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <main class="py-5 position-relative">
+    <main class="py-0 py-sm-5 position-relative">
       <video autoplay muted loop id="myVideo">
         <source src="./videos/latte-art.mp4" type="video/mp4" />
       </video>
 
       <section>
-        <div class="container container-fluid blur p-4">
+        <div class="container container-fluid blur main-content p-4">
           <h2 class="text-center">Register for free today!</h2>
           <div class="container container-fluid">
             <p class="mb-4">
@@ -73,11 +77,9 @@
               best barista win!
             </p>
           </div>
-        </div>
-      </section>
 
-      <section>
-        <div class="container container-fluid blur mb-5 p-4">
+          <hr class="my-5" />
+
           <form>
             <div class="form-group">
               <label for="name">Name</label>
@@ -154,7 +156,9 @@
 
     <footer class="fixed-bottom">
       <div class="container container-fluid p-3">
-        <p class="text-white text-center m-0">&#169; 2020 Ana Boca</p>
+        <p class="text-white text-center m-0">
+          Having trouble? <a href="#">CONTACT SUPPORT</a>
+        </p>
       </div>
     </footer>
   </body>

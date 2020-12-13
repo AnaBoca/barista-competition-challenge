@@ -67,24 +67,25 @@ module.exports = {
           {
             // This loader resolves url() and @imports inside CSS
             loader: 'css-loader',
+            options: {
+              url: false,
+            },
           },
           {
             // Then we apply postCSS fixes like autoprefixer and minifying
             loader: 'postcss-loader',
           },
-          {
-            loader: 'resolve-url-loader',
-            options: {
-              sourceMap: false,
-            },
-          },
+          // {
+          //   loader: 'resolve-url-loader',
+          //   options: {
+          //     sourceMap: false,
+          //   },
+          // },
           {
             // First we transform SASS to standard CSS
             loader: 'sass-loader',
             options: {
               implementation: require('sass'),
-              sourceMap: false,
-              sourceMapContents: false,
             },
           },
         ],

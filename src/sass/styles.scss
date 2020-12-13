@@ -14,22 +14,6 @@ $purple: #281a1f;
 // Extra small devices (portrait phones, less than 576px
 // No media query for 'xs' since this is the default in Bootstrap
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-}
-
 * {
   box-sizing: border-box;
 }
@@ -58,43 +42,34 @@ h2 {
 h2 {
   font-size: 3rem;
 }
+.navbar {
+  z-index: 1;
+  background-image: url('../images/nav-background.png');
+
+  img {
+    height: 2.5rem;
+  }
+}
+
+.nav-link {
+  border-bottom: 2px solid transparent;
+
+  &:visited {
+    color: #fff;
+  }
+
+  &:hover {
+    border-bottom: 2px solid $coffee;
+  }
+}
 
 .navbar-brand {
-  font-size: 3.5rem;
-}
-
-.navbar img {
-  height: 2.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.navbar {
-  background: #000;
-}
-
-#main-navbar a,
-#main-navbar a:visited {
-  color: #fff;
-}
-
-#main-navbar a:hover {
-  border-bottom: 2px solid $coffee;
-}
-
-#navbar-brand-text a,
-#navbar-brand-text a:visited {
-  color: #fff;
-}
-
-#navbar-brand-text a:hover {
-  color: $coffee;
-  text-decoration: none;
-  border: none;
+  h1:hover {
+    color: $coffee;
+  }
 }
 
 video {
-  // max-width: 100%;
-  // top: 0;
   object-fit: cover;
   width: 100vw;
   height: 100vh;
@@ -105,9 +80,7 @@ video {
 
 .blur {
   backdrop-filter: blur(10px);
-  // background-color: rgba(68, 36, 6, 0.35);
   background-color: transparentize($coffee, 0.65);
-  border-radius: 0.5rem;
 }
 
 section {
@@ -123,7 +96,20 @@ form,
 }
 
 footer {
-  background-color: $brown;
+  background-image: linear-gradient(
+      transparentize($pumpkin, 0.75),
+      transparentize($pumpkin, 0.75)
+    ),
+    url('../images/nav-background.png');
+
+  a,
+  a:visited {
+    color: $pumpkin;
+  }
+  a:hover {
+    text-decoration: none;
+    color: $purple;
+  }
 }
 
 .btn-register {
@@ -138,13 +124,32 @@ footer {
   font-size: 0.75rem;
 }
 
-#rules a,
-#rules a:visited {
-  color: #fff;
+#rules {
+  a,
+  a:visited {
+    color: #fff;
+  }
+  a:hover {
+    text-decoration: none;
+    color: $pumpkin;
+  }
 }
 
-#rules a:hover {
-  text-decoration: none;
-  color: $pumpkin;
-  font-weight: bold;
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .main-content {
+    border-radius: 0.5rem;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
 }

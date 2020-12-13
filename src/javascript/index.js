@@ -1,4 +1,5 @@
 import '../sass/styles.scss';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import '../videos/latte-art.mp4';
 import '../images/favicon.ico';
@@ -18,7 +19,7 @@ btnRegister.addEventListener('click', (event) => {
     fakeFormSubmission(formValues)
       .then(() => {
         form.parentNode.innerHTML = `
-          <div class='alert alert-light' id='success-alert'>
+          <div id='success-alert'>
             <h2>Registration Success!</h2>
             <p class='mb-0'>You are on your way to becoming earning the title of Top Barista!</p>
           </div>`;
@@ -99,10 +100,10 @@ function validateFormData(data) {
   }
 
   if (data.phone === '') {
-    errors.phone.push('Phone cannot be blank.');
+    errors.phone.push('Phone number cannot be blank.');
     validationObj.isValid = false;
   } else if (!data.phone.match(phoneFormat)) {
-    errors.phone.push('Phone entered is invalid');
+    errors.phone.push('Phone number format should be: 555-555-5555.');
     validationObj.isValid = false;
   }
 
