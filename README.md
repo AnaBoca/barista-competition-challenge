@@ -21,7 +21,7 @@ Web page published to github-pages at: **[barista-competition-challenge](https:/
 
 - The page uses Webpack so that assets are bundled and minified lowering the number of HTTP requests and improving load times.
 - The page uses responsive, mobile-first design.
-- The registration form includes includes client-side validation with a simulated backend that runs the same validation logic.
+- The registration form includes client-side validation with a simulated backend that runs the same validation logic.
 - The application includes a `loadVideoIfNetworkIsGood()` function that will only load the background video
   if the network has a connection of 3g or 4g and if the user does not choose to save data on a mobile device.
 - Large images where optimized using [Squoosh.app](https://squoosh.app/).
